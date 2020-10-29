@@ -9,6 +9,13 @@
     "source-of-truth",
     "cli"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Designory/diff-dev-prod.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Designory/diff-dev-prod/issues"
+  },
   "scripts": {
     "test": "echo NO TESTS"
   },
