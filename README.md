@@ -1,5 +1,7 @@
 # Diff Dev Prod
 
+[![npm version](https://badge.fury.io/js/%40designory%2Fdiff-dev-prod.svg)](https://badge.fury.io/js/%40designory%2Fdiff-dev-prod)
+
 Imagine the following scenario:
 
 You are hired to build a simple static website, possibly using a
@@ -173,11 +175,11 @@ detailed below:
             "selector": "String",
 
             // After the elements have been selected, they can be filtered by
-            // its contents for a simple string match.
+            // their contents for a simple string match.
             "contains": "String",
 
             // After the elements have been selected, they can be filtered by
-            // checking its contents for a regular expression match.
+            // checking their contents for a regular expression match.
             // Note that this regular expression should **not** contain starting
             // and ending slashes, and all backslashes should be escaped.
             // @example `"containsRegex": "jQuery v\\d+"`

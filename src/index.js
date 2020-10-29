@@ -527,11 +527,11 @@ The shape of the clean JSON configuration is as follows:
       ${chalk.magenta('"selector":')} ${chalk.yellow('"String"')},
 
       ${chalk.gray(`// After the elements have been selected, they can be filtered by`)}
-      ${chalk.gray(`// its contents for a simple string match.`)}
+      ${chalk.gray(`// their contents for a simple string match.`)}
       ${chalk.magenta('"contains":')} ${chalk.yellow('"String"')},
 
       ${chalk.gray(`// After the elements have been selected, they can be filtered by`)}
-      ${chalk.gray(`// checking its contents for a regular expression match.`)}
+      ${chalk.gray(`// checking their contents for a regular expression match.`)}
       ${chalk.gray(`// Note that this regular expression should **not** contain starting`)}
       ${chalk.gray(`// and ending slashes, and all backslashes should be escaped.`)}
       ${chalk.gray(`// @example \`"containsRegex": "jQuery v\\\\d+"\``)}
