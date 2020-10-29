@@ -1,0 +1,45 @@
+{
+  "name": "@designory/diff-dev-prod",
+  "version": "0.0.1-beta.0",
+  "description": "View useful differences between development source code and deployed production code.",
+  "author": "Matt Wade <matt.wade@designory.com>",
+  "scripts": {
+    "test": "echo NO TESTS"
+  },
+  "bin": {
+    "ddp": "./bin/run",
+    "diff-dev-prod": "./bin/run"
+  },
+  "main": "src/index.js",
+  "files": [
+    "/bin",
+    "/src"
+  ],
+  "oclif": {
+    "bin": "ddp"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">= 10.0.0"
+  },
+  "dependencies": {
+    "@oclif/command": "^1.8.0",
+    "@oclif/config": "^1.17.0",
+    "@oclif/plugin-help": "^3.2.0",
+    "chalk": "^4.1.0",
+    "child-process-promise": "^2.2.1",
+    "diff2html": "^3.1.14",
+    "fs-extra": "^9.0.1",
+    "globby": "^11.0.1",
+    "html-minifier": "^4.0.0",
+    "inquirer": "^7.3.3",
+    "js-beautify": "^1.13.0",
+    "jsdom": "^16.4.0",
+    "node-fetch": "^2.6.1"
+  },
+  "devDependencies": {
+    "mocha": "^8.2.0",
+    "mock-stdin": "^1.0.0",
+    "nock": "^13.0.4"
+  }
+}
