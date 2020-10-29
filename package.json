@@ -3,6 +3,12 @@
   "version": "0.0.1-beta.0",
   "description": "View useful differences between development source code and deployed production code.",
   "author": "Matt Wade <matt.wade@designory.com>",
+  "keywords": [
+    "diff",
+    "static-site",
+    "source-of-truth",
+    "cli"
+  ],
   "scripts": {
     "test": "echo NO TESTS"
   },
