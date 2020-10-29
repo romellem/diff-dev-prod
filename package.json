@@ -1,6 +1,6 @@
 {
   "name": "@designory/diff-dev-prod",
-  "version": "0.0.1-beta.0",
+  "version": "0.1.0",
   "description": "View useful differences between development source code and deployed production code.",
   "author": "Matt Wade <matt.wade@designory.com>",
   "keywords": [
