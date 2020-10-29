@@ -36,6 +36,7 @@ deployed production code.
 - [Requirements](#requirements)
 - [Installation](#installation)
 - [Usage](#usage)
+    - [CLI Arguments and Options](#cli-arguments-and-options)
     - [Non-Interactive Mode Usage](#non-interactive-mode-usage)
     - [Interactive Mode Usage](#interactive-mode-usage)
 - [Clean Configuration](#clean-configuration)
@@ -89,6 +90,50 @@ By default, the program runs in non-interactive mode. To run the program in inte
 pass in the `-i` or `--interactive` flag.
 
 Run `ddp --help` to view more information.
+
+### CLI Arguments and Options
+
+```shell
+$ ddp [options] <domain>
+```
+
+#### Domain Argument
+
+The domain should be entered with the `http://` or `https://` protocol, and should
+not have an ending slash.
+
+```shell
+$ ddp http://example.com
+```
+
+Note that this argument is required unless in `--interactive` mode.
+
+#### Options
+
+Options / flags should be entered before the domain argument, and are detailed below:
+
+```
+-b, --build-dir=build-dir        The directory of your built HTML files. Defaults to "build".
+
+-c, --clean-config=clean-config  A JSON string, or a file path to a JSON file, to configure how the
+                                 HTML should be cleaned before it is diff'd. If "stdin" is passed,
+                                 piped input will be used as the clean config. If invalid JSON is
+                                 passed, the command exits early. See the DESCRIPTION section for
+                                 more information on this.
+
+-h, --help                       Show CLI help.
+
+-i, --interactive                When true, will prompt for inputs it has not explicitly received.
+                                 Defaults to false.
+
+-o, --output=output              The filename of the HTML diff report. If "stdout" is passed, the
+                                 unified diff string is echoed out.
+
+-q, --quiet                      When true, suppresses any progress messages that otherwise would be
+                                 logged out. Defaults to false.
+
+-v, --version                    Show CLI version.
+```
 
 ### Non-Interactive Mode Usage
 
