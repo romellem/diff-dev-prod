@@ -494,12 +494,16 @@ class DiffDevProdCommand extends Command {
 			await fs.remove(CACHE_DIRECTORY);
 		}
 
-		const raw_html_diff = Diff2html.html(diff_output);
-		const html_diff = createHtmlDiff({ title: root_domain, diff: raw_html_diff });
-
-		await fs.writeFile(output_filename, html_diff);
 		loud && this.log(chalk.green('Done computing all differences!'));
-		loud && this.log(chalk.green(`Written to ${chalk.blue(output_filename)}`));
+		if (output_filename === 'stdout') {
+			this.log(diff_output);
+		} else {
+			const raw_html_diff = Diff2html.html(diff_output);
+			const html_diff = createHtmlDiff({ title: root_domain, diff: raw_html_diff });
+
+			await fs.writeFile(output_filename, html_diff);
+			loud && this.log(chalk.green(`Written to ${chalk.blue(output_filename)}`));
+		}
 		this.exit(0);
 	}
 }
@@ -616,6 +620,7 @@ DiffDevProdCommand.examples = [
 	`$ ddp --clean-config='{ "elements": [{ "remove": true, "selector": "script", "containsRegex": "jQuery v\\\\d+", "containsRegexFlags": "i" }] }' https://example.com`,
 	`$ ddp --clean-config="clean-config.json" https://example.com`,
 	`$ cat clean-config.json | ddp --clean-config=stdin https://example.com`,
+	`$ ddp --quiet --output=stdout https://example.com`,
 ];
 
 DiffDevProdCommand.args = [
