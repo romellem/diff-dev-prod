@@ -501,6 +501,7 @@ class DiffDevProdCommand extends Command {
 			const raw_html_diff = Diff2html.html(diff_output);
 			const html_diff = createHtmlDiff({ title: root_domain, diff: raw_html_diff });
 
+			await fs.ensureDir(path.dirname(output_filename));
 			await fs.writeFile(output_filename, html_diff);
 			loud && this.log(chalk.green(`Written to ${chalk.blue(output_filename)}`));
 		}
